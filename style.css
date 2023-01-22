@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body {
+    transition: background 0.2s linear;
+    background-color: #3d3a4b;
+    position: relative;
+    justify-content: center;
+  }
+  body.dark {
+    background-color: #d3d3d3;
+  }
+ 
+.header{
+  width: 100%;
+  height: 6rem;
+  padding: 0 8.5%;
+  position: relative; 
+}
+
+
+ .navigation{
+  background-color: #d3d3d3;
+  margin-left: 32%;
+  width: 34.6rem;
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 8px black;
+ }
+
+ .navigation__ul{
+  margin-left: 13rem;
+ }
+ .navigation__lists{
+    list-style: none;
+ }
+ .navigation__a, .Nova__link{
+    text-decoration: none;
+    color: brown;
+ }
+ .navigation__a{
+  font-weight:bold;
+ }
+ .navigation__a:hover{
+  color: blueviolet;
+ }
+
+ 
+ .main{
+  background-color: cornflowerblue;
+  display: grid;
+  width: 50rem;
+  margin-left: 28%;
+  margin-top: 5%;
+  border-radius: 1rem;
+ }
+ h1{
+  display: flex;
+  justify-content: center;
+ }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+.label {
+  width: 20px;
+  height: 9px;
+  background-color:rgb(39, 37, 37);
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  transform: scale(1.5);
+  }
+  
+  .ball {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  position: absolute;
+  top: 0.5px;
+  left: 0.5px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+  }
+
+  .checkbox:checked + .label .ball{
+    transform: translateX(9px);
+  }
+
+  footer{
+    margin-left: 10rem;
+    margin-top: 22rem;
+    background-color: #27262c;
+  }
+  
+  .container__div{
+    margin-left: 38rem;
+  }
+  address{
+    margin-left: 1rem;
+  }
+
+  .comments{
+    margin-left: 1rem;
+  }
+  #comment-box{
+    margin-left: 1rem;
+  }
+
+
+
+
+
+
+
+  .first__sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(138deg, #9374b1, #813737, #334f6e);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  .second__sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 1;
+    right: 0;
+    background: linear-gradient(189deg, #9374b1, #813737, #334f6e);
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+.dtek_image{
+    width: 150px;
+    height: 50px;
+}
+
+.invisible__link{
+    visibility: hidden;
+}
+
+.pepe__image{
+    width: 100px;
+    height: 90px;
+}

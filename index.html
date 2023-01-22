@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sciopheme</title>
+</head>
+<body>
+
+
+
+
+    
+    <div class="first__sidenav"></div>
+    <div class="second__sidenav"></div>
+<!----------------------------------- Header part begins --------------------------->
+
+    <header class="header">
+        <nav class="navigation">
+            <p class="header__paragraph"> Попрошу не игнорировать тот прогресс, которым пропитана эта область :</p>
+            <ul class="navigation__ul">
+            <li class="navigation__lists">
+                <a href="https://about-games.neocities.org" class="navigation__a">About Games Website</a>
+            </li>
+            <li class="navigation__lists">
+                <a href="https://ourukraine.neocities.org" class="navigation__a">OurUkraine Website</a>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+<!----------------------------------- Main part begins --------------------------->
+    
+    <main class="main">
+        <h1>
+            ВНИМАНИЕ: ща будут инпуты.<br> Спасибо за внимание.
+        </h1>
+        <br><br><br>
+        <div>
+        <p class="checkbox__paragraph">Покой для глаз</p>
+        <div class="checkbox__div">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+        <div class="ball"></div>
+        </label>
+        </div>
+        </div>
+
+        <p>нажми
+        <a href="./BCP.png" download="BetterCallPepe.png">
+            <input type="image" src="./pepe.png" class="pepe__image">
+          </a>
+        </p>
+
+        <p class="main__paragraph__Dtek"> Будем честны, никто их не любит →
+        <a href="https://www.dtek-kem.com.ua">
+            <img src="./dtek.png" class="dtek_image">
+        </a>
+        </p>
+            
+        <br>
+
+        <p class="main__paragraph__Nova">
+            Гении как-то сказали: "Живи глобально. Відкрий для себе міжнародний сервіс, легкого експорту та імпорту до 200 країн Світу.<br>
+            <a href="https://novaposhtaglobal.ua" class="Nova__link">Nova Global</a> — це кругосвітні подорожі для твоїх посилок та вантажів."
+        </p>
+
+        <a class="invisible__link" href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiDgeqJo9n8AhVSxIsKHWWkDeAQwqsBegQICRAF&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&usg=AOvVaw0aHtehaphMhOCAkCydRLZU">STOP!!!</a>
+    </main>
+
+<!----------------------------------- Footer part begins --------------------------->
+
+    <footer>
+        <div class="footer__div">
+            <div class="container__div">
+        <div class="container">
+            <h2>Написать слово:</h2>
+            <form>
+               <textarea id="" placeholder="Заходит улитка в бар..." value=" "></textarea>
+               <div class="btn">
+                   <input id="submit" type="submit" value="Закинуть">
+                   <button id="clear">  
+                    &#128591;</button>
+               </div> 
+            </form>
+        </div>
+        </div>
+
+        <address>
+        Кидать мемы можно сюда:
+        <a href="mailto:leontiy.bond@gmail.com">leontiy.bond@gmail.com</a><br>
+        Сообщать смешные шутки можно по телефону:
+        <a href="tel:+380957073731">(+380)95-707-37-31 </a>
+        </address>
+        </div>
+
+
+        <div class="comments">
+            <h2>Коменты: </h2>
+             <div id="comment-box">
+             </div>
+         </div>
+    </footer>
+
+
+<!----------------------------------- Scripts part begins --------------------------->
+    <script>
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('change', ()=>{
+document.body.classList.toggle('dark');
+});
+
+////////////////////////////////// Comment part //////////////////////////////////
+
+const field = document.querySelector('textarea');
+const backUp = field.getAttribute('placeholder')
+const btn = document.querySelector('.btn');
+const clear = document.getElementById('clear')
+const submit = document.querySelector('#submit')
+
+const comments = document.getElementById('comment-box');
+
+
+const comments_arr = [];
+
+
+const display_comments = () => {
+  let list = '<ul>';
+   comments_arr.forEach(comment => {
+    list += `<li>${comment}</li>`;
+  })
+  list += '</ul>';
+  comments.innerHTML = list;
+}
+
+clear.onclick = function(event){
+  event.preventDefault();
+    
+   comments_arr.length = 0;
+  
+  display_comments();
+}
+
+submit.onclick = function(event){
+    event.preventDefault();
+    const content = field.value;
+    if(content.length > 0){ 
+      
+      comments_arr.push(content);
+      
+      display_comments();
+      
+      field.value = '';
+    }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
